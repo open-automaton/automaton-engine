@@ -1,5 +1,5 @@
-@open-automaton/automaton
-=========================
+@open-automaton/automaton-engine
+================================
 A generalized interface for scraping
 
 Usage

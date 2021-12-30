@@ -1,7 +1,7 @@
 {
     "name": "@open-automaton/automaton-engine",
     "homepage": "https://github.com/open-automaton/automaton-engine",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "src/automaton-engine.js",
     "description": "A base class for scraping engines",
     "keywords": [],
@@ -16,6 +16,8 @@
         "url": "git@github.com:open-automaton/automaton-engine.git"
     },
     "dependencies": {
+        "clone": "^2.1.2",
+        "libxmljs": "^0.19.7"
     },
     "devDependencies": {
         "chai": "^4.3.4",

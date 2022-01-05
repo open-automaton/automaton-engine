@@ -71,7 +71,7 @@ DOM.regexText = function(selector, value){
     var filter = new RegExp(selector, 'g');
     var selection=[];
     var a;
-    while(a=regexp.exec(filter, value)){
+    while(a=filter.exec(filter, value)){
         if(a[1]) selection.push(a[1]);
         else selection.push(a[0]);
     }

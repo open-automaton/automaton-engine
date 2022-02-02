@@ -3,8 +3,13 @@ const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const makeDelayTest = require('./canonical/delay');
+const makeUntilExistsTest = require('./canonical/until-exists');
+
 module.exports = (Automaton, should)=>{
     return {
+        testDelayAttribute : makeDelayTest(Automaton, should),
+        testUntilExistsAttribute : makeUntilExistsTest(Automaton, should),
         loadDefinition : function(engine, complete){
             fs.readFile(
                 path.join(

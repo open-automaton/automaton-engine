@@ -5,10 +5,12 @@ const bodyParser = require('body-parser');
 
 const makeDelayTest = require('./canonical/delay');
 const makeUntilExistsTest = require('./canonical/until-exists');
+const makeTimeoutTest = require('./canonical/timeout');
 
 module.exports = (Automaton, should)=>{
     return {
         testDelayAttribute : makeDelayTest(Automaton, should),
+        testTimeoutAttribute : makeTimeoutTest(Automaton, should),
         testUntilExistsAttribute : makeUntilExistsTest(Automaton, should),
         loadDefinition : function(engine, complete){
             fs.readFile(

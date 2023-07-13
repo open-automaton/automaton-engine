@@ -1,14 +1,16 @@
 const should = require('chai').should();
-const path = require('path');
-const Automaton = require('@open-automaton/automaton');
-const fs = require('fs');
-const express = require('express');
-const bodyParser = require('body-parser');
+const { DOM } = require('../src/dom-tool.js');
 
 describe('strip-mine', function(){
     describe('automaton', function(){
-        it.skip('generic test', function(done){
-            
+        it('xpath works', function(){
+            const result = DOM.xpathText(
+                '//bar/baz/text()',
+                '<foo><bar><baz>woot</baz></bar></foo>'
+            );
+            result.length.should.equal(1);
+            should.exist(result[0]);
+            result[0].should.equal('woot');
         });
     });
 });

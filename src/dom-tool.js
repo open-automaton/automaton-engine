@@ -54,7 +54,7 @@ DOM.next = function(node){
     return node.next;
 };
 DOM.xpathText = function(selector, value){
-    if(!libs.libxmljs) libs.libxmljs = require("libxmljs");
+    if(!libs.libxmljs) libs.libxmljs = require("libxmljs2");
     var xmlDoc = libs.libxmljs.parseHtmlString(value);
     var result = xmlDoc.find(selector);
     var results = [];
